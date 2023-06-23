@@ -6,9 +6,11 @@ niveles = 12
 resultados = []
 
 print("Inicializando aplicacion")
+
 def calcular(can, niv):  
     """FUNCION PARA CALCULAR LA POSICION DE CADA
     CANICA ....."""
+    
     for i in range(can + 1) :  #Creamos un ciclo para el rango de canicas + 1 
         canica = 0  #definimos una variable local
         for x in range(niv + 1) : #Iniciamos otro ciclo para el rango de niveles 
@@ -17,6 +19,7 @@ def calcular(can, niv):
                 canica += 1 
             else:  #Si no se cumple esta condicion 
                 continue  #usamos la sentecnia continue
+            
         resultados.append(canica)  
 
 def graficar(valoresAbsolutos) :  
@@ -26,5 +29,6 @@ def graficar(valoresAbsolutos) :
     plt.ylabel("Numero de canicas")  #Al el eje Y le ponemos de titulo Numero de canicas
     plt.xlabel("Numero de casilla")  #Al eje X le ponemos de titulo Numero de casilla 1 - 12
     plt.show() 
+
 calcular(canicas, niveles)  
 graficar(resultados)
