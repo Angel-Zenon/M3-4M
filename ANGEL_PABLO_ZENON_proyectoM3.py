@@ -1,11 +1,11 @@
-import random  #Primero importamos las librerias que vamos a utilizar
+import random 
 import matplotlib.pyplot as plt 
 
-canicas = 3000 #Definimos el numero de canicas
-niveles = 12   #Definimos el numero de niveles
-resultados = []#Definimos una lista para almacenar la casilla en la que quedo cada canica
+canicas = 3000 
+niveles = 12   
+resultados = []
 
-def calcular(can, niv):  #creamos una funcion que recibe los valores de canicas y los niveles
+def calcular(can, niv):  
     """FUNCION PARA CALCULAR LA POSICION DE CADA
     CANICA ....."""
     for i in range(can + 1) :  #Creamos un ciclo para el rango de canicas + 1 
@@ -16,13 +16,14 @@ def calcular(can, niv):  #creamos una funcion que recibe los valores de canicas 
                 canica += 1 
             else:  #Si no se cumple esta condicion 
                 continue  #usamos la sentecnia continue
-        resultados.append(canica)  #El resultado de la canica sera guradado en una lista ya antes definida
+        resultados.append(canica)  
 
-def graficar(valoresAbsolutos) :  #Creamos una funcion para graficar que pide un valor absoluto
-    plt.hist(valoresAbsolutos, color = "pink") #Usamos la funcion hist de la libreria matloplip.pyplot para graficar el valor en forma de histograma
-    plt.title("Simulación de la Máquina de Galton") #Le ponemos el titulo
+def graficar(valoresAbsolutos) :  
+    """funcion para graficar que pide un valor absoluto"""
+    plt.hist(valoresAbsolutos, color = "red") #Usamos la funcion hist de la libreria matloplip.pyplot para graficar el valor en forma de histograma
+    plt.title("Simulación de la Máquina de Galton") 
     plt.ylabel("Numero de canicas")  #Al el eje Y le ponemos de titulo Numero de canicas
     plt.xlabel("Numero de casilla")  #Al eje X le ponemos de titulo Numero de casilla 1 - 12
-    plt.show() #Y finalmente usamos la funcion .show de la libreria plt para ver el histograma 
-calcular(canicas, niveles)  #Finalmanete llamamos a la funcion calcular con los valores indicados
-graficar(resultados)     #Y al igual llamanos a la funcion graficas para que haga el histograma
+    plt.show() 
+calcular(canicas, niveles)  
+graficar(resultados)
