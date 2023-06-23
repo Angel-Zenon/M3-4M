@@ -5,6 +5,7 @@ canicas = 3000
 niveles = 12   
 resultados = []
 
+print("Inicializando aplicacion")
 def calcular(can, niv):  
     """FUNCION PARA CALCULAR LA POSICION DE CADA
     CANICA ....."""
